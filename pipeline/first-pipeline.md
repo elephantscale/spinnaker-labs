@@ -147,7 +147,11 @@ Create the **dev** Service and Ingress
     ```
 
 1. Click "Create"
+
+![](../images/deploying-manifest.png)
+
 1. Click "Close"
+
 
 Create the **test** Service and Ingress
 

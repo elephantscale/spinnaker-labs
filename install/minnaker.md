@@ -36,11 +36,6 @@ password: '/yPR59fA5IMQVQFo/BhOvLs1MIRbl7TmMmPiL9NSpMiGyBPZ'
 
 ## Step 3 Execute the install script
 
-5. Execute the install script. Note the following options before running the script:
-     * Add the `-o` flag if you want to install open source Spinnaker.
-     * By default, the script installs Armory Spinnaker and uses your public IP address (determined by `curl`ing `ifconfig.co`) as the endpoint for Spinnaker.
-     * For bare metal or a local VM, specify the IP address for your server with `-P` flag. `-P` is the 'Public Endpoint' and must be an address or DNS name you will use to access Spinnaker (an IP address reachable by your end users).
-
 ```bash
 ./scripts/install.sh
 ```
