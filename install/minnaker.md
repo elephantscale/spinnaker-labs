@@ -66,23 +66,23 @@ password: 'v5fXi/tiHPsUqXhiENE+Q89esG3GBdJ/cFXmprx8mRINcH8t'
 You can also get username like this:
 
 
-    ```bash
-    grep override /etc/spinnaker/.hal/config
-    ```
+```bash
+grep override /etc/spinnaker/.hal/config
+```
 
-    Use the first URL.
+Use the first URL.
 
 And you can get password like this:
 
-    ```bash
-    cat /etc/spinnaker/.hal/.secret/spinnaker_password
-    ```
+```bash
+cat /etc/spinnaker/.hal/.secret/spinnaker_password
+```
 
 ## Step 5: Navigate to Spinnaker
 
 In your browser, navigate to the IP_ADDR (https://IP/) for Spinnaker from step 1. This is Deck, the Spinnaker UI.
 
-     If you installed Minnaker on a local VM, you must access it from your local machine. If you deployed Minnaker in the cloud, such as an EC2 instance, you can access Spinnaker from any machine that has access to that 'Public IP'.
+If you installed Minnaker on a local VM, you must access it from your local machine. If you deployed Minnaker in the cloud, such as an EC2 instance, you can access Spinnaker from any machine that has access to that 'Public IP'.
 
 Log in to Deck with the following credentials:
 
