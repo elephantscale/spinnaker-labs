@@ -9,6 +9,12 @@ sudo ./aws/install
 aws --version
 ```
 
+
+## Configure AWS
+```bash
+aws configure  # enter the Keys we will get
+```
+
 ```console
 
 aws-cli 1.15.58 from Amazon Web Services (aws✓) installed
