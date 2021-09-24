@@ -72,9 +72,10 @@ On the Minnaker VM, move or copy the file to `/etc/spinnaker/.hal/.secret` (make
 Then, run this command:
 
 ```bash
-hal config provider kubernetes account add us-east-1-dev \
+
+hal config provider kubernetes account add us-west-1-dev2 \
   --provider-version v2 \
-  --kubeconfig-file /home/spinnaker/.hal/.secret/kubeconfig-us-east-1-dev \
+  --kubeconfig-file /home/ubuntu/.hal/.secret/kubeconfig-us-east-1-dev \
   --only-spinnaker-managed true
 ```
 
