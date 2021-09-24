@@ -67,7 +67,10 @@ Copy this file from your local workstation to your Minnaker VM.  You can use scp
 
 ## Add the kubeconfig to Spinnaker's Halyard Configuration
 
-On the Minnaker VM, move or copy the file to `/etc/spinnaker/.hal/.secret` (make sure you are creating a new file, not overwriting an existing one).
+```bash
+cp ~/.kube/config /etc/spinnaker/.hal/.secret/kubeconfig-us-west-1-dev2
+```
+
 
 Then, run this command:
 
@@ -75,12 +78,12 @@ Then, run this command:
 
 hal config provider kubernetes account add us-west-1-dev2 \
   --provider-version v2 \
-  --kubeconfig-file /home/ubuntu/.hal/.secret/kubeconfig-us-east-1-dev \
+  --kubeconfig-file /home/ubuntu/.hal/.secret/kubeconfig-us-west-1-dev2 \
   --only-spinnaker-managed true
 ```
 
 Note two things:
-* Replace us-east-1-dev with something that identifies your Kubernetes cluster
+* Replace us-west-1-de2v with something that identifies your Kubernetes cluster
 * Update the `--kubeconfig-file` path with the correct filename.  Note that the path will be `/home/spinnaker/...` **not** `/etc/spinnaker/...` - this is because this command will be run inside the Halyard container, which has local volumes mounted into it.
 
 ## Apply your changes
