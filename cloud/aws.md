@@ -1,0 +1,38 @@
+
+```console
+ubuntu@ip-172-16-0-64:~$ sudo snap install aws-cli --classic
+
+aws-cli 1.15.58 from Amazon Web Services (aws✓) installed
+ubuntu@ip-172-16-0-64:~$
+ubuntu@ip-172-16-0-64:~$ aws sts get-caller-identity
+
+{
+    "Arn": "arn:aws:sts::092413168457:assumed-role/Spinnaker-Managing-Role/i-0bf3f22b08ccdd16e",
+    "UserId": "AROARLBCBBNE3N7YM2ADI:i-0bf3f22b08ccdd16e",
+    "Account": "092413168457"
+}
+ubuntu@ip-172-16-0-64:~$ aws sts assume-role --role-arn arn:aws:iam::092413168457:role/Spinnaker-Managed-Role --role-session-name   test
+{
+    "Credentials": {
+        "SessionToken": "FwoGZXIvYXdzEM7//////////wEaDFMdS1kpdCbo9c/DRCKoAaVI9adJoMX8JWNqQFiAZLougeSObEFPIn2TLZXeksfIQ/XOHDQX+BDEjV4UFxYORve4Fj49FSdpfcbK370tyeI1BHDMh++ivLhWSbmZCCz0/iKaZDyvmJ1gQRp5WJebBrWb6qNW5oYoQjFkixYcFtqm3heBCFDfNyqiiE0vqoYWGu2AkMWC0bc+qEMDXl7c7zSCqLtx7STOY4PLNyE2a32YTJGbYV0QyyjkhrCKBjItM/KmVYWpNE4aKyC5mMVi2CKB8XvzntY6BS2GfRJ4jg0j11Tgb5w2xdHqbwKm",
+        "AccessKeyId": "ASIARLBCBBNERQ6GQK54",
+        "Expiration": "2021-09-23T05:32:36Z",
+        "SecretAccessKey": "a+kyU0LBZG3CuIsFHAZl2KFHc6nvis7CnwjMON5R"
+    },
+    "AssumedRoleUser": {
+        "AssumedRoleId": "AROARLBCBBNESOM3YMEEJ:test",
+        "Arn": "arn:aws:sts::092413168457:assumed-role/Spinnaker-Managed-Role/test"
+    }
+}
+```
+
+
+Set the following:
+
+```console
+
+
+export AWS_ACCOUNT_NAME=elephantscale \
+export ACCOUNT_ID=092413168457 \
+export ROLE_NAME=role/Spinnaker-Managed-Role
+```
