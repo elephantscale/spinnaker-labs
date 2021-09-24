@@ -78,7 +78,7 @@ Then, run this command:
 
 hal config provider kubernetes account add us-west-1-dev2 \
   --provider-version v2 \
-  --kubeconfig-file /home/ubuntu/.hal/.secret/kubeconfig-us-west-1-dev2 \
+  --kubeconfig-file /home/spinnaker/.hal/.secret/kubeconfig-us-west-1-dev2 \
   --only-spinnaker-managed true
 ```
 
